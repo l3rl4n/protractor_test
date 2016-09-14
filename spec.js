@@ -28,7 +28,7 @@ describe('Given I load the new prepack UI', function() {
 
   it('then I should see  Nassau in the Departure', function(){
     console.log("departure text - " + searchPage.departureDropDown.getText())
-    // expect(searchPage.departureDropDown.getText()).toEqual('Nassau');
+    expect(searchPage.departureDropDown.getAttribute('value')).toEqual('Nassau');
   });
        
 });
