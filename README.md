@@ -18,7 +18,7 @@ npm install --save-dev protractor-cucumber-framework
 ### And Boom! You're ready to rock!
 
 ```sh
-protractor cucumber.conf.js
+protractor cucumber.js
 ```
 
 ### Helpful Links
