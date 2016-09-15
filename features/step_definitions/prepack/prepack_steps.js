@@ -6,8 +6,16 @@ module.exports = function() {
     });
 
     this.Given(/^I search via the new prepack ui: (.*?)$/, function (options, cb) {
-        console.log("I HAVE NO IDEA HOW TO DO ALL THE FANCY THINGS WITH HASHES YET IN JS")
-        console.log("Here are my options" + options)
+        var params = {}
+
+        Options = options.split('; ')
+        for (i in Options) {
+            k = Options[i].split(':')[0].trim()
+            v = Options[i].split(':')[1].trim()
+            params[k] = v
+        }
+
+        console.log(params)
         cb();
     })
 
