@@ -1,12 +1,12 @@
 // spec.js
 var SearchPage = function() { 
   this.departureDropDown      = $("[name=departing]");
-  this.departureDropDownClear = $("button.ng-scope");
+  this.departureDropDownClear = element.all(by.css("button.ng-scope")).first()
   this.destinationDropDown    = $("[name=destination]");
 };
 
 describe('Given I load the new prepack UI', function() {
-  var searchPage = new SearchPage();
+  var sP = new SearchPage();
 
   // beforeEach(function() {
   // });
@@ -18,17 +18,19 @@ describe('Given I load the new prepack UI', function() {
   });
 
   it('should have a departure drop down', function(){
-    expect(searchPage.departureDropDown.isDisplayed()).toBe(true);
+    expect(sP.departureDropDown.isDisplayed()).toBe(true);
   });
 
   it('then I input Nassau in the Departure', function(){
-    searchPage.departureDropDownClear.click();
-    searchPage.departureDropDown.sendKeys('Nassau');
+    sP.departureDropDownClear.click();
+    sP.departureDropDown.sendKeys('Nassau');
   });
 
   it('then I should see  Nassau in the Departure', function(){
-    console.log("departure text - " + searchPage.departureDropDown.getText())
-    expect(searchPage.departureDropDown.getAttribute('value')).toEqual('Nassau');
+    // sP.departureDropDown.getAttribute('value').then(function(text) {
+    //   console.log("departure text - " + text);
+    // });
+    expect(sP.departureDropDown.getAttribute('value')).toEqual('Nassau');
   });
        
 });
