@@ -12,6 +12,7 @@ webdriver-manager start
 
 ```sh
 npm install -g cucumber
+npm install cucumber-assert
 npm install --save-dev protractor-cucumber-framework
 ```
 
@@ -23,6 +24,7 @@ protractor cucumber.js
 
 ### Helpful Links
 [Element Locators](https://github.com/angular/protractor/blob/master/docs/locators.md)
+[Assertions](https://github.com/djungowski/cucumber-assert)
 
 License
 ----

@@ -6,6 +6,8 @@ var SearchPage = function() {
     this.destinationDropDownClear = element.all(by.css("button.ng-scope")).last()
 };
 
+var assert = require('cucumber-assert');
+
 module.exports = function() {
 
     this.Given(/^I go to "([^"]*)"$/, function (site, cb) {
@@ -26,8 +28,11 @@ module.exports = function() {
 
         sP.departureDropDownClear.click();
         sP.departureDropDown.sendKeys('Nassau');
-        //expect(sP.departureDropDown.getAttribute('value')).toEqual('Nassau');
 
+        console.log(sP.departureDropDown.getAttribute('value'))
+
+        //expect(sP.departureDropDown.getAttribute('value')).toEqual('Nassau');
+        assert.equal(sP.departureDropDown.getAttribute('value'), 'Nassau', cb, 'Expected input value to be Nassau, instead I found:  ' + sP.departureDropDown.getAttribute('value'));
         cb();
     })
 
