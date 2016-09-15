@@ -21,6 +21,9 @@ npm install --save-dev protractor-cucumber-framework
 protractor cucumber.conf.js
 ```
 
+### Helpful Links
+[Element Locators](https://github.com/angular/protractor/blob/master/docs/locators.md)
+
 License
 ----
 
