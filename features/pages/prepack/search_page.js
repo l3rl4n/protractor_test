@@ -1,4 +1,4 @@
-module.exports = function () {
+module.exports = function() {
 
     // Keep this variable private inside this closure scope
     var myGrades = [93, 95, 88, 0, 55, 91];
