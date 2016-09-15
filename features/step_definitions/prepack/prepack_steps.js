@@ -7,6 +7,7 @@ module.exports = function() {
 
     this.Given(/^I search via the new prepack ui: (.*?)$/, function (options, cb) {
         var params = {}
+        //var sP = require('features/pages/prepack/search_page.js');
 
         Options = options.split('; ')
         for (i in Options) {
@@ -14,6 +15,8 @@ module.exports = function() {
             v = Options[i].split(':')[1].trim()
             params[k] = v
         }
+
+        //sP.failing()
 
         console.log(params)
         cb();
